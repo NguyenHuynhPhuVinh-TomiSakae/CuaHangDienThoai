@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Chào mừng bạn đến với ứng dụng CỬA HÀNG ĐIỆN THOẠI!
+
+Ứng dụng này được phát triển nhằm mục đích hỗ trợ các cửa hàng kinh doanh điện thoại trong việc quản lý các hoạt động hàng ngày một cách hiệu quả và chuyên nghiệp. Với giao diện trực quan và dễ sử dụng, **CỬA HÀNG ĐIỆN THOẠI** sẽ giúp bạn tiết kiệm thời gian, giảm thiểu sai sót và nâng cao năng suất làm việc.
+
+Các tính năng chính của ứng dụng:
+
+-Quản lý sản phẩm: Cho phép bạn dễ dàng thêm mới, chỉnh sửa và xóa thông tin về các sản phẩm điện thoại, bao gồm tên sản phẩm, hãng sản xuất, giá bán, số lượng tồn kho, mô tả chi tiết và hình ảnh minh họa. Bạn có thể tìm kiếm sản phẩm nhanh chóng theo tên, mã sản phẩm hoặc các tiêu chí khác.
+
+-Quản lý kho hàng: Cung cấp cái nhìn tổng quan về tình hình kho hàng của bạn. Bạn có thể theo dõi số lượng tồn kho hiện tại của từng sản phẩm, xem lịch sử nhập và xuất kho, và nhận cảnh báo khi số lượng sản phẩm xuống dưới mức cho phép. Điều này giúp bạn quản lý hàng tồn kho hiệu quả hơn, tránh tình trạng thiếu hàng hoặc tồn kho quá nhiều.
+
+-Quản lý khách hàng: Lưu trữ thông tin chi tiết của khách hàng, bao gồm tên, số điện thoại, địa chỉ, lịch sử mua hàng và các ghi chú liên quan. Bạn có thể dễ dàng tìm kiếm thông tin khách hàng và xem lại các giao dịch đã thực hiện.
+
+-Quản lý bán hàng: Cho phép bạn tạo và quản lý các đơn hàng một cách nhanh chóng. Bạn có thể chọn sản phẩm, nhập số lượng, áp dụng giảm giá (nếu có) và in hóa đơn cho khách hàng. Ứng dụng cũng hỗ trợ theo dõi trạng thái thanh toán của đơn hàng.
+
+-Quản lý nhà cung cấp: Lưu trữ thông tin của các nhà cung cấp, giúp bạn dễ dàng quản lý thông tin liên hệ và theo dõi các giao dịch nhập hàng.
+
+-Báo cáo và thống kê: Cung cấp các báo cáo chi tiết về tình hình kinh doanh của cửa hàng, bao gồm báo cáo doanh thu, báo cáo lợi nhuận, báo cáo hàng bán chạy và nhiều báo cáo khác. Những báo cáo này giúp bạn có cái nhìn tổng quan về hiệu quả kinh doanh và đưa ra các quyết định sáng suốt.
+
+Lợi ích khi sử dụng ứng dụng CỬA HÀNG ĐIỆN THOẠI:
+
+-Tiết kiệm thời gian: Các thao tác quản lý được thực hiện nhanh chóng và hiệu quả, giúp bạn tiết kiệm thời gian cho các công việc khác.
+-Giảm thiểu sai sót: Quản lý dữ liệu tập trung và tự động hóa các quy trình giúp giảm thiểu các lỗi do nhập liệu thủ công.
+-Nâng cao hiệu quả làm việc: Dễ dàng truy cập và quản lý thông tin, giúp bạn làm việc hiệu quả hơn.
+-Cải thiện khả năng quản lý: Cung cấp cái nhìn tổng quan và chi tiết về hoạt động kinh doanh của cửa hàng.
+-Tăng cường sự chuyên nghiệp: Giao diện người dùng thân thiện và các tính năng mạnh mẽ giúp bạn quản lý cửa hàng một cách chuyên nghiệp hơn.
+
+Ứng dụng CỬA HÀNG ĐIỆN THOẠI được xây dựng trên nền tảng WinForms với ngôn ngữ lập trình C#, đảm bảo tính ổn định và dễ dàng bảo trì. Chúng tôi cam kết mang đến cho bạn một công cụ quản lý hiệu quả và đáng tin cậy.
+
+Hãy khám phá và trải nghiệm các tính năng tuyệt vời của ứng dụng CỬA HÀNG ĐIỆN THOẠI ngay hôm nay!</value>
+  </data>
+</root>

@@ -16,5 +16,23 @@ namespace CuaHangDienThoai
         {
             InitializeComponent();
         }
+
+        private void qUẢNLÝToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLySanPham frm = new QuanLySanPham();
+            frm.Show();
+        }
+
+        private void tRToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TraCuuSanPham frm = new TraCuuSanPham();
+            frm.Show();
+        }
+
+        private void gIỚITHIỆUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GioiThieu frm = new GioiThieu();
+            frm.Show();
+        }
     }
 }
