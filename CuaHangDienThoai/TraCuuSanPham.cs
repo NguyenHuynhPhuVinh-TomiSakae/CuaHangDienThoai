@@ -37,6 +37,7 @@ namespace CuaHangDienThoai
             txt_masp.Text = "";
             txt_tensp.Text = "";
             txt_masp.Focus();
+            sanPhamBindingSource.Filter = "";
         }
 
         private void btn_timtheoma_Click(object sender, EventArgs e)

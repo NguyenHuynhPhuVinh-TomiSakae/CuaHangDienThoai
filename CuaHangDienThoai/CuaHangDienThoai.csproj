@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -107,6 +110,7 @@
     <EmbeddedResource Include="TraCuuSanPham.resx">
       <DependentUpon>TraCuuSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="CHDTDataSet.xsc">
       <DependentUpon>CHDTDataSet.xsd</DependentUpon>
     </None>
