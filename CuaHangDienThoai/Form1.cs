@@ -2,11 +2,13 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CuaHangDienThoai
 {    
     public partial class Form1 : Form
     {
+        string connectionString = @"Data Source=TOMISAKAE;Initial Catalog=CHDT;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
@@ -97,26 +99,35 @@ namespace CuaHangDienThoai
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Kiểm tra tài khoản/mật khẩu giả lập (sẽ nói rõ hơn ở phần 2)
-            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Truyền "admin" vào constructor của frmQuanTri
-                frmQuanTri frm = new frmQuanTri("admin"); // Hoặc frmQuanTri frm = new frmQuanTri(true);
-                this.Hide();
-                frm.ShowDialog();
-                this.Show();
-            }
-            else if (txtUsername.Text == "user" && txtPassword.Text == "user")
-            {
-                // Truyền "user" vào constructor của frmQuanTri
-                frmQuanTri frm = new frmQuanTri("user"); // Hoặc frmQuanTri frm = new frmQuanTri(false);
-                this.Hide();
-                frm.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT LoaiTaiKhoan FROM TaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan AND MatKhau = @MatKhau";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@TenTaiKhoan", txtUsername.Text);
+                        command.Parameters.AddWithValue("@MatKhau", txtPassword.Text);
+                        object result = command.ExecuteScalar();
+                        if (result != null)
+                        {
+                            string role = result.ToString();
+                            frmQuanTri frm = new frmQuanTri(role);
+                            this.Hide();
+                            frm.ShowDialog();
+                            this.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message);
+                }
             }
         }
     }

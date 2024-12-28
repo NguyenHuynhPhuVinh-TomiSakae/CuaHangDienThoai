@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,40 +13,50 @@ namespace CuaHangDienThoai
 {
     public partial class frmQuanTri : Form
     {
-        public string IsAdmin { get; set; } // Hoặc public bool IsAdmin { get; set; }
+        // Chuỗi kết nối CSDL
+        string connectionString = @"Data Source=TOMISAKAE;Initial Catalog=CHDT;Integrated Security=True";
 
-        // Constructor mặc định (không tham số)
-        public frmQuanTri()
+        // Biến lưu trạng thái admin hay user
+        string role;
+        // hoặc có thể dùng biến bool
+        // bool isAdmin;
+
+        // Constructor nhận tham số từ Form1
+        public frmQuanTri(string role)
         {
             InitializeComponent();
+            this.role = role; // Gán giá trị cho biến role
+            // hoặc this.isAdmin = isAdmin;
             menuStrip1.Renderer = new CustomRenderer();
         }
 
-        // Constructor có tham số để nhận giá trị IsAdmin
-        public frmQuanTri(string isAdmin)
+        // Hàm ẩn hiện các chức năng tùy theo role
+        private void PhanQuyen()
         {
-            InitializeComponent();
-            menuStrip1.Renderer = new CustomRenderer();
-            this.IsAdmin = isAdmin; // Hoặc this.IsAdmin = (isAdmin == "admin"); nếu bạn dùng kiểu bool
+            if (role == "admin") // Nếu là admin
+            {
+                quảnLýToolStripMenuItem.Visible = true;
+                traCứuToolStripMenuItem.Visible = true;
+                tinhToantoolStripMenuItem2.Visible = true;
+                thongKetoolStripMenuItem1.Visible = true;
+                baoBieutoolStripMenuItem3.Visible = true;
+            }
+            else if (role == "user") // Nếu là user
+            {
+                // Nếu không phải admin thì có thể ẩn hết menu hoặc chỉ để lại 1 số menu tra cứu cơ bản
+                quảnLýToolStripMenuItem.Visible = false;
+                tinhToantoolStripMenuItem2.Visible = false;
+                thongKetoolStripMenuItem1.Visible = false;
+                baoBieutoolStripMenuItem3.Visible = false;
+                traCứuToolStripMenuItem.Visible = true;
+                traCứuSảnPhẩmToolStripMenuItem.Visible = true;
+            }
         }
 
         private void frmQuanTri_Load(object sender, EventArgs e)
         {
-            // Ẩn/hiện các menu dựa trên quyền admin
-            if (IsAdmin == "admin")
-            {
-                quảnLýToolStripMenuItem.Visible = true;
-                traCứuToolStripMenuItem.Visible = true;
-            }
-            else
-            {
-                // Nếu không phải admin thì có thể ẩn hết menu hoặc chỉ để lại 1 số menu tra cứu cơ bản
-                quảnLýToolStripMenuItem.Visible = false;
-                traCứuToolStripMenuItem.Visible = true;
-                traCứuSảnPhẩmToolStripMenuItem.Visible = true;
-            }
-
-            // Hiển thị hướng dẫn sử dụng
+            PhanQuyen(); // Gọi hàm phân quyền khi form load
+             // Hiển thị hướng dẫn sử dụng
             txtHuongDan.Text = GetHuongDanSuDung();
             txtHuongDan.ReadOnly = true; // Không cho phép chỉnh sửa
             txtHuongDan.Multiline = true;
@@ -55,11 +66,11 @@ namespace CuaHangDienThoai
 
         private void sảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Mở form quản lý sản phẩm
-            //frmQLSanPham frm = new frmQLSanPham();
-            //this.Hide();
-            //frm.ShowDialog();
-            //this.Show();
+
+            frmQLSanPham frm = new frmQLSanPham();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         // Phương thức tạo nội dung hướng dẫn sử dụng
@@ -115,6 +126,70 @@ namespace CuaHangDienThoai
             string markdownText = sb.ToString();
 
             return sb.ToString();
+        }
+
+        private void traCứuSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTCSanPham frm = new frmTCSanPham();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQLNhanVien frm = new frmQLNhanVien();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQLKhachHang frm = new frmQLKhachHang();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQLTaiKhoan frm = new frmQLTaiKhoan();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQLNhaCungCap frm = new frmQLNhaCungCap();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void traCứuNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTCNhanVien frm = new frmTCNhanVien();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void traCứuKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTCKhachHang frm = new frmTCKhachHang();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void traCứuTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTCTaiKhoan frm = new frmTCTaiKhoan();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

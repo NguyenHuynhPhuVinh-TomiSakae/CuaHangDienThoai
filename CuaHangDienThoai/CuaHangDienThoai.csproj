@@ -61,19 +61,88 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQLHangSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHangSanXuat.Designer.cs">
+      <DependentUpon>frmQLHangSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLKhachHang.Designer.cs">
+      <DependentUpon>frmQLKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLNhaCungCap.Designer.cs">
+      <DependentUpon>frmQLNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLNhanVien.Designer.cs">
+      <DependentUpon>frmQLNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLSanPham.Designer.cs">
+      <DependentUpon>frmQLSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLTaiKhoan.Designer.cs">
+      <DependentUpon>frmQLTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQuanTri.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQuanTri.Designer.cs">
       <DependentUpon>frmQuanTri.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTCKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTCKhachHang.Designer.cs">
+      <DependentUpon>frmTCKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTCNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTCNhanVien.Designer.cs">
+      <DependentUpon>frmTCNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTCSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTCSanPham.Designer.cs">
+      <DependentUpon>frmTCSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTCTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTCTaiKhoan.Designer.cs">
+      <DependentUpon>frmTCTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQLSanPham.resx">
+      <DependentUpon>frmQLSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLTaiKhoan.resx">
+      <DependentUpon>frmQLTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQuanTri.resx">
       <DependentUpon>frmQuanTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTCTaiKhoan.resx">
+      <DependentUpon>frmTCTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
