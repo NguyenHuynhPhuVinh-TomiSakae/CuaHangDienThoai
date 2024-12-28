@@ -117,35 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Chào mừng bạn đến với ứng dụng CỬA HÀNG ĐIỆN THOẠI!
-
-Ứng dụng này được phát triển nhằm mục đích hỗ trợ các cửa hàng kinh doanh điện thoại trong việc quản lý các hoạt động hàng ngày một cách hiệu quả và chuyên nghiệp. Với giao diện trực quan và dễ sử dụng, **CỬA HÀNG ĐIỆN THOẠI** sẽ giúp bạn tiết kiệm thời gian, giảm thiểu sai sót và nâng cao năng suất làm việc.
-
-Các tính năng chính của ứng dụng:
-
--Quản lý sản phẩm: Cho phép bạn dễ dàng thêm mới, chỉnh sửa và xóa thông tin về các sản phẩm điện thoại, bao gồm tên sản phẩm, hãng sản xuất, giá bán, số lượng tồn kho, mô tả chi tiết và hình ảnh minh họa. Bạn có thể tìm kiếm sản phẩm nhanh chóng theo tên, mã sản phẩm hoặc các tiêu chí khác.
-
--Quản lý kho hàng: Cung cấp cái nhìn tổng quan về tình hình kho hàng của bạn. Bạn có thể theo dõi số lượng tồn kho hiện tại của từng sản phẩm, xem lịch sử nhập và xuất kho, và nhận cảnh báo khi số lượng sản phẩm xuống dưới mức cho phép. Điều này giúp bạn quản lý hàng tồn kho hiệu quả hơn, tránh tình trạng thiếu hàng hoặc tồn kho quá nhiều.
-
--Quản lý khách hàng: Lưu trữ thông tin chi tiết của khách hàng, bao gồm tên, số điện thoại, địa chỉ, lịch sử mua hàng và các ghi chú liên quan. Bạn có thể dễ dàng tìm kiếm thông tin khách hàng và xem lại các giao dịch đã thực hiện.
-
--Quản lý bán hàng: Cho phép bạn tạo và quản lý các đơn hàng một cách nhanh chóng. Bạn có thể chọn sản phẩm, nhập số lượng, áp dụng giảm giá (nếu có) và in hóa đơn cho khách hàng. Ứng dụng cũng hỗ trợ theo dõi trạng thái thanh toán của đơn hàng.
-
--Quản lý nhà cung cấp: Lưu trữ thông tin của các nhà cung cấp, giúp bạn dễ dàng quản lý thông tin liên hệ và theo dõi các giao dịch nhập hàng.
-
--Báo cáo và thống kê: Cung cấp các báo cáo chi tiết về tình hình kinh doanh của cửa hàng, bao gồm báo cáo doanh thu, báo cáo lợi nhuận, báo cáo hàng bán chạy và nhiều báo cáo khác. Những báo cáo này giúp bạn có cái nhìn tổng quan về hiệu quả kinh doanh và đưa ra các quyết định sáng suốt.
-
-Lợi ích khi sử dụng ứng dụng CỬA HÀNG ĐIỆN THOẠI:
-
--Tiết kiệm thời gian: Các thao tác quản lý được thực hiện nhanh chóng và hiệu quả, giúp bạn tiết kiệm thời gian cho các công việc khác.
--Giảm thiểu sai sót: Quản lý dữ liệu tập trung và tự động hóa các quy trình giúp giảm thiểu các lỗi do nhập liệu thủ công.
--Nâng cao hiệu quả làm việc: Dễ dàng truy cập và quản lý thông tin, giúp bạn làm việc hiệu quả hơn.
--Cải thiện khả năng quản lý: Cung cấp cái nhìn tổng quan và chi tiết về hoạt động kinh doanh của cửa hàng.
--Tăng cường sự chuyên nghiệp: Giao diện người dùng thân thiện và các tính năng mạnh mẽ giúp bạn quản lý cửa hàng một cách chuyên nghiệp hơn.
-
-Ứng dụng CỬA HÀNG ĐIỆN THOẠI được xây dựng trên nền tảng WinForms với ngôn ngữ lập trình C#, đảm bảo tính ổn định và dễ dàng bảo trì. Chúng tôi cam kết mang đến cho bạn một công cụ quản lý hiệu quả và đáng tin cậy.
-
-Hãy khám phá và trải nghiệm các tính năng tuyệt vời của ứng dụng CỬA HÀNG ĐIỆN THOẠI ngay hôm nay!</value>
-  </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

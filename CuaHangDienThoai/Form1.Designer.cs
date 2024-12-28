@@ -28,200 +28,177 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.tRANGCHỦToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sẢNPHẨMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.qUẢNLÝToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gIỚITHIỆUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tHỐNGKÊToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bÁOCÁOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bÁOBIỂUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.hDSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblSubTitle = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.panelBackground = new System.Windows.Forms.Panel();
+            this.panelPassword = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.panelUsername = new System.Windows.Forms.Panel();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.panelBackground.SuspendLayout();
+            this.panelPassword.SuspendLayout();
+            this.panelUsername.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // lblTitle
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tRANGCHỦToolStripMenuItem,
-            this.sẢNPHẨMToolStripMenuItem,
-            this.gIỚITHIỆUToolStripMenuItem,
-            this.tHỐNGKÊToolStripMenuItem,
-            this.bÁOCÁOToolStripMenuItem,
-            this.bÁOBIỂUToolStripMenuItem,
-            this.hDSDToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(815, 30);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(20, 20);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(360, 60);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "CỬA HÀNG";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tRANGCHỦToolStripMenuItem
+            // lblSubTitle
             // 
-            this.tRANGCHỦToolStripMenuItem.Name = "tRANGCHỦToolStripMenuItem";
-            this.tRANGCHỦToolStripMenuItem.Size = new System.Drawing.Size(105, 26);
-            this.tRANGCHỦToolStripMenuItem.Text = "TRANG CHỦ";
+            this.lblSubTitle.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Bold);
+            this.lblSubTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.lblSubTitle.Location = new System.Drawing.Point(20, 80);
+            this.lblSubTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubTitle.Name = "lblSubTitle";
+            this.lblSubTitle.Size = new System.Drawing.Size(360, 70);
+            this.lblSubTitle.TabIndex = 3;
+            this.lblSubTitle.Text = "ĐIỆN THOẠI";
+            this.lblSubTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // sẢNPHẨMToolStripMenuItem
+            // btnLogin
             // 
-            this.sẢNPHẨMToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.qUẢNLÝToolStripMenuItem,
-            this.tRToolStripMenuItem});
-            this.sẢNPHẨMToolStripMenuItem.Name = "sẢNPHẨMToolStripMenuItem";
-            this.sẢNPHẨMToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
-            this.sẢNPHẨMToolStripMenuItem.Text = "SẢN PHẨM";
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(40, 320);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(320, 55);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "ĐĂNG NHẬP";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // qUẢNLÝToolStripMenuItem
+            // btnClose
             // 
-            this.qUẢNLÝToolStripMenuItem.Name = "qUẢNLÝToolStripMenuItem";
-            this.qUẢNLÝToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
-            this.qUẢNLÝToolStripMenuItem.Text = "QUẢN LÝ";
-            this.qUẢNLÝToolStripMenuItem.Click += new System.EventHandler(this.qUẢNLÝToolStripMenuItem_Click);
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(405, 15);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(35, 35);
+            this.btnClose.TabIndex = 5;
+            this.btnClose.Text = "×";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // tRToolStripMenuItem
+            // panelBackground
             // 
-            this.tRToolStripMenuItem.Name = "tRToolStripMenuItem";
-            this.tRToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
-            this.tRToolStripMenuItem.Text = "TRA CỨU";
-            this.tRToolStripMenuItem.Click += new System.EventHandler(this.tRToolStripMenuItem_Click);
+            this.panelBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            this.panelBackground.Controls.Add(this.panelPassword);
+            this.panelBackground.Controls.Add(this.panelUsername);
+            this.panelBackground.Controls.Add(this.lblTitle);
+            this.panelBackground.Controls.Add(this.btnLogin);
+            this.panelBackground.Controls.Add(this.lblSubTitle);
+            this.panelBackground.Location = new System.Drawing.Point(25, 25);
+            this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Padding = new System.Windows.Forms.Padding(20);
+            this.panelBackground.Size = new System.Drawing.Size(400, 450);
+            this.panelBackground.TabIndex = 6;
             // 
-            // gIỚITHIỆUToolStripMenuItem
+            // panelPassword
             // 
-            this.gIỚITHIỆUToolStripMenuItem.Name = "gIỚITHIỆUToolStripMenuItem";
-            this.gIỚITHIỆUToolStripMenuItem.Size = new System.Drawing.Size(97, 26);
-            this.gIỚITHIỆUToolStripMenuItem.Text = "GIỚI THIỆU";
-            this.gIỚITHIỆUToolStripMenuItem.Click += new System.EventHandler(this.gIỚITHIỆUToolStripMenuItem_Click);
+            this.panelPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.panelPassword.Controls.Add(this.txtPassword);
+            this.panelPassword.Location = new System.Drawing.Point(40, 250);
+            this.panelPassword.Name = "panelPassword";
+            this.panelPassword.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.panelPassword.Size = new System.Drawing.Size(320, 50);
+            this.panelPassword.TabIndex = 8;
+            this.panelPassword.Paint += new System.Windows.Forms.PaintEventHandler(this.RoundedPanel_Paint);
             // 
-            // tHỐNGKÊToolStripMenuItem
+            // txtPassword
             // 
-            this.tHỐNGKÊToolStripMenuItem.Name = "tHỐNGKÊToolStripMenuItem";
-            this.tHỐNGKÊToolStripMenuItem.Size = new System.Drawing.Size(95, 26);
-            this.tHỐNGKÊToolStripMenuItem.Text = "THỐNG KÊ";
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtPassword.ForeColor = System.Drawing.Color.LightGray;
+            this.txtPassword.Location = new System.Drawing.Point(10, 8);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(300, 27);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.Text = "   Mật khẩu";
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
-            // bÁOCÁOToolStripMenuItem
+            // panelUsername
             // 
-            this.bÁOCÁOToolStripMenuItem.Name = "bÁOCÁOToolStripMenuItem";
-            this.bÁOCÁOToolStripMenuItem.Size = new System.Drawing.Size(100, 26);
-            this.bÁOCÁOToolStripMenuItem.Text = "TÍNH TOÁN";
+            this.panelUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.panelUsername.Controls.Add(this.txtUsername);
+            this.panelUsername.Location = new System.Drawing.Point(40, 180);
+            this.panelUsername.Name = "panelUsername";
+            this.panelUsername.Padding = new System.Windows.Forms.Padding(10, 8, 10, 8);
+            this.panelUsername.Size = new System.Drawing.Size(320, 50);
+            this.panelUsername.TabIndex = 7;
+            this.panelUsername.Paint += new System.Windows.Forms.PaintEventHandler(this.RoundedPanel_Paint);
             // 
-            // bÁOBIỂUToolStripMenuItem
+            // txtUsername
             // 
-            this.bÁOBIỂUToolStripMenuItem.Name = "bÁOBIỂUToolStripMenuItem";
-            this.bÁOBIỂUToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
-            this.bÁOBIỂUToolStripMenuItem.Text = "BÁO BIỂU";
-            // 
-            // hDSDToolStripMenuItem
-            // 
-            this.hDSDToolStripMenuItem.Name = "hDSDToolStripMenuItem";
-            this.hDSDToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
-            this.hDSDToolStripMenuItem.Text = "HDSD";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(219, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(407, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "CỬA HÀNG ĐIỆN THOẠI";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 163);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 26);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Tài Khoản:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(68, 231);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 26);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Mật Khẩu: ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(189, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(536, 34);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(189, 223);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(536, 34);
-            this.textBox2.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(311, 309);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 54);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Đăng Nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtUsername.ForeColor = System.Drawing.Color.LightGray;
+            this.txtUsername.Location = new System.Drawing.Point(10, 8);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(300, 27);
+            this.txtUsername.TabIndex = 0;
+            this.txtUsername.Text = "   Tên đăng nhập";
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 407);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MainMenuStrip = this.menuStrip1;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.ClientSize = new System.Drawing.Size(450, 500);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.panelBackground);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Cửa Hàng Điện Thoại";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
+            this.panelBackground.ResumeLayout(false);
+            this.panelPassword.ResumeLayout(false);
+            this.panelPassword.PerformLayout();
+            this.panelUsername.ResumeLayout(false);
+            this.panelUsername.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem tRANGCHỦToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sẢNPHẨMToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gIỚITHIỆUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tHỐNGKÊToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bÁOCÁOToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bÁOBIỂUToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem hDSDToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripMenuItem qUẢNLÝToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tRToolStripMenuItem;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblSubTitle;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Panel panelBackground;
+        private System.Windows.Forms.Panel panelUsername;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Panel panelPassword;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }
-

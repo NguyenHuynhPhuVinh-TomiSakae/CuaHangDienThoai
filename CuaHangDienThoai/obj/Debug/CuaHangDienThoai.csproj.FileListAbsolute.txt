@@ -8,7 +8,4 @@ C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDien
 C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.csproj.CoreCompileInputs.cache
 C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.exe
 C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.pdb
-C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.QuanLySanPham.resources
-C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.QuanLyHangSanXuat.resources
-C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.TraCuuSanPham.resources
-C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.GioiThieu.resources
+C:\Users\kotor\Documents\CuaHangDienThoai\CuaHangDienThoai\obj\Debug\CuaHangDienThoai.frmQuanTri.resources
