@@ -5,25 +5,27 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace CuaHangDienThoai
-{    
+{
     public partial class Form1 : Form
     {
         string connectionString = @"Data Source=TOMISAKAE;Initial Catalog=CHDT;Integrated Security=True";
+
         public Form1()
         {
             InitializeComponent();
+            // Thêm sự kiện để cập nhật label khi form được resize
+            this.Resize += new EventHandler(Form1_Resize);
         }
 
-        // Hàm vẽ bo tròn cho form
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             GraphicsPath path = new GraphicsPath();
-            int radius = 20; // Độ bo tròn
+            int radius = 30; 
             Rectangle rect = new Rectangle(0, 0, this.Width, this.Height);
-            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90); // Top left
-            path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90); // Top right
-            path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90); // Bottom right
-            path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90); // Bottom left
+            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90); 
+            path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90); 
+            path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90); 
+            path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90); 
             path.CloseFigure();
             this.Region = new Region(path);
         }
@@ -38,7 +40,7 @@ namespace CuaHangDienThoai
             if (txtUsername.Text == "   Tên đăng nhập")
             {
                 txtUsername.Text = "";
-                txtUsername.ForeColor = Color.White;
+                txtUsername.ForeColor = Color.White; 
             }
         }
 
@@ -47,7 +49,7 @@ namespace CuaHangDienThoai
             if (string.IsNullOrWhiteSpace(txtUsername.Text))
             {
                 txtUsername.Text = "   Tên đăng nhập";
-                txtUsername.ForeColor = Color.LightGray;
+                txtUsername.ForeColor = Color.FromArgb(158, 161, 176); 
             }
         }
 
@@ -56,8 +58,8 @@ namespace CuaHangDienThoai
             if (txtPassword.Text == "   Mật khẩu")
             {
                 txtPassword.Text = "";
-                txtPassword.ForeColor = Color.White;
-                txtPassword.UseSystemPasswordChar = true; // Ẩn ký tự khi bắt đầu nhập
+                txtPassword.ForeColor = Color.White; 
+                txtPassword.UseSystemPasswordChar = true;
             }
         }
 
@@ -66,33 +68,39 @@ namespace CuaHangDienThoai
             if (string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 txtPassword.Text = "   Mật khẩu";
-                txtPassword.ForeColor = Color.LightGray;
-                txtPassword.UseSystemPasswordChar = false; // Không ẩn ký tự khi không có gì
+                txtPassword.ForeColor = Color.FromArgb(158, 161, 176); 
+                txtPassword.UseSystemPasswordChar = false;
             }
         }
 
-        // Hàm vẽ bo tròn cho Panel
         private void RoundedPanel_Paint(object sender, PaintEventArgs e)
         {
             Panel panel = (Panel)sender;
-            GraphicsPath path = new GraphicsPath();
-            int radius = 10; // Độ bo tròn cho panel
-            Rectangle rect = new Rectangle(0, 0, panel.Width, panel.Height);
-            path.AddArc(rect.X, rect.Y, radius, radius, 180, 90); // Top left
-            path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90); // Top right
-            path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90); // Bottom right
-            path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90); // Bottom left
-            path.CloseFigure();
-            panel.Region = new Region(path);
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                int radius = 20; 
+                Rectangle rect = new Rectangle(0, 0, panel.Width - 1, panel.Height - 1);
+                path.AddArc(rect.X, rect.Y, radius, radius, 180, 90); 
+                path.AddArc(rect.X + rect.Width - radius, rect.Y, radius, radius, 270, 90); 
+                path.AddArc(rect.X + rect.Width - radius, rect.Y + rect.Height - radius, radius, radius, 0, 90); 
+                path.AddArc(rect.X, rect.Y + rect.Height - radius, radius, radius, 90, 90); 
+                path.CloseFigure();
+
+                panel.Region = new Region(path);
+
+                using (Pen pen = new Pen(Color.FromArgb(24, 30, 54), 2)) 
+                {
+                    e.Graphics.DrawPath(pen, path);
+                }
+            }
         }
 
-        // Override để loại bỏ border mặc định khi form có bo tròn
         protected override CreateParams CreateParams
         {
             get
             {
                 CreateParams cp = base.CreateParams;
-                cp.ClassStyle |= 0x20000; // CS_NOCLOSE
+                cp.ClassStyle |= 0x20000; 
                 return cp;
             }
         }
@@ -129,6 +137,31 @@ namespace CuaHangDienThoai
                     MessageBox.Show("Lỗi: " + ex.Message);
                 }
             }
+        }
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red; 
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent; 
+        }
+
+        private void btnLogin_MouseEnter(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.FromArgb(0, 85, 170); 
+        }
+
+        private void btnLogin_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogin.BackColor = Color.FromArgb(0, 126, 249); 
+        }
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Cập nhật vị trí của label bản quyền
+            lblCopyright.Location = new Point(21, this.ClientSize.Height - lblCopyright.Height - 10);
         }
     }
 }
