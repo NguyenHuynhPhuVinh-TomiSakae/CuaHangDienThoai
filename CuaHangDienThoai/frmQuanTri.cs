@@ -40,14 +40,18 @@ namespace CuaHangDienThoai
                 tinhToantoolStripMenuItem2.Visible = true;
                 thongKetoolStripMenuItem1.Visible = true;
                 baoBieutoolStripMenuItem3.Visible = true;
+                nhanSanPhamtoolStripMenuItem2.Visible = true;
+                lapHoaDontoolStripMenuItem1.Visible = true;
             }
             else if (role == "user") // Nếu là user
             {
                 // Nếu không phải admin thì có thể ẩn hết menu hoặc chỉ để lại 1 số menu tra cứu cơ bản
                 quảnLýToolStripMenuItem.Visible = false;
-                tinhToantoolStripMenuItem2.Visible = false;
+                tinhToantoolStripMenuItem2.Visible = true;
                 thongKetoolStripMenuItem1.Visible = false;
                 baoBieutoolStripMenuItem3.Visible = false;
+                nhanSanPhamtoolStripMenuItem2.Visible = false;
+                lapHoaDontoolStripMenuItem1.Visible = false;
                 traCứuToolStripMenuItem.Visible = true;
                 traCứuSảnPhẩmToolStripMenuItem.Visible = true;
             }
@@ -187,6 +191,46 @@ namespace CuaHangDienThoai
         private void traCứuTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTCTaiKhoan frm = new frmTCTaiKhoan();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void tinhToantoolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmTinhToan frm = new frmTinhToan();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void thongKetoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmThongKe frm = new frmThongKe();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void baoBieutoolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            frmBaoBieu frm = new frmBaoBieu();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void lapHoaDontoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmLapHoaDon frm = new frmLapHoaDon();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void nhanSanPhamtoolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmNhapSanPham frm = new frmNhapSanPham();
             this.Hide();
             frm.ShowDialog();
             this.Show();
