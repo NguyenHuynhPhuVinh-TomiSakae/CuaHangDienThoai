@@ -147,6 +147,12 @@
     <Compile Include="frmTCTaiKhoan.Designer.cs">
       <DependentUpon>frmTCTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThanhToanHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhToanHoaDon.Designer.cs">
+      <DependentUpon>frmThanhToanHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmThongKe.cs">
       <SubType>Form</SubType>
     </Compile>

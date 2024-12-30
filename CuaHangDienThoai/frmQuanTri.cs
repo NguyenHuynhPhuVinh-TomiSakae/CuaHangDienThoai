@@ -42,6 +42,7 @@ namespace CuaHangDienThoai
                 baoBieutoolStripMenuItem3.Visible = true;
                 nhanSanPhamtoolStripMenuItem2.Visible = true;
                 lapHoaDontoolStripMenuItem1.Visible = true;
+                ThanhToantoolStripMenuItem1.Visible = false;
             }
             else if (role == "user") // Nếu là user
             {
@@ -54,6 +55,7 @@ namespace CuaHangDienThoai
                 lapHoaDontoolStripMenuItem1.Visible = false;
                 traCứuToolStripMenuItem.Visible = true;
                 traCứuSảnPhẩmToolStripMenuItem.Visible = true;
+                ThanhToantoolStripMenuItem1.Visible = true;
             }
         }
 
@@ -231,6 +233,14 @@ namespace CuaHangDienThoai
         private void nhanSanPhamtoolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmNhapSanPham frm = new frmNhapSanPham();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmThanhToanHoaDon frm = new frmThanhToanHoaDon();
             this.Hide();
             frm.ShowDialog();
             this.Show();

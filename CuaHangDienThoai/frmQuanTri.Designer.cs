@@ -43,12 +43,13 @@
             this.tinhToantoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.thongKetoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.baoBieutoolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lapHoaDontoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nhanSanPhamtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtHuongDan = new System.Windows.Forms.TextBox();
-            this.lapHoaDontoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhanSanPhamtoolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThanhToantoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,7 +67,8 @@
             this.thongKetoolStripMenuItem1,
             this.baoBieutoolStripMenuItem3,
             this.lapHoaDontoolStripMenuItem1,
-            this.nhanSanPhamtoolStripMenuItem2});
+            this.nhanSanPhamtoolStripMenuItem2,
+            this.ThanhToantoolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -195,6 +197,22 @@
             this.baoBieutoolStripMenuItem3.Text = "Báo Biểu";
             this.baoBieutoolStripMenuItem3.Click += new System.EventHandler(this.baoBieutoolStripMenuItem3_Click);
             // 
+            // lapHoaDontoolStripMenuItem1
+            // 
+            this.lapHoaDontoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.lapHoaDontoolStripMenuItem1.Name = "lapHoaDontoolStripMenuItem1";
+            this.lapHoaDontoolStripMenuItem1.Size = new System.Drawing.Size(124, 27);
+            this.lapHoaDontoolStripMenuItem1.Text = "Lập Hóa Đơn";
+            this.lapHoaDontoolStripMenuItem1.Click += new System.EventHandler(this.lapHoaDontoolStripMenuItem1_Click);
+            // 
+            // nhanSanPhamtoolStripMenuItem2
+            // 
+            this.nhanSanPhamtoolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.nhanSanPhamtoolStripMenuItem2.Name = "nhanSanPhamtoolStripMenuItem2";
+            this.nhanSanPhamtoolStripMenuItem2.Size = new System.Drawing.Size(148, 27);
+            this.nhanSanPhamtoolStripMenuItem2.Text = "Nhập Sản Phẩm";
+            this.nhanSanPhamtoolStripMenuItem2.Click += new System.EventHandler(this.nhanSanPhamtoolStripMenuItem2_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
@@ -243,21 +261,13 @@
             this.txtHuongDan.TabIndex = 0;
             this.txtHuongDan.Text = "Hướng dẫn sử dụng";
             // 
-            // lapHoaDontoolStripMenuItem1
+            // ThanhToantoolStripMenuItem1
             // 
-            this.lapHoaDontoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.lapHoaDontoolStripMenuItem1.Name = "lapHoaDontoolStripMenuItem1";
-            this.lapHoaDontoolStripMenuItem1.Size = new System.Drawing.Size(124, 27);
-            this.lapHoaDontoolStripMenuItem1.Text = "Lập Hóa Đơn";
-            this.lapHoaDontoolStripMenuItem1.Click += new System.EventHandler(this.lapHoaDontoolStripMenuItem1_Click);
-            // 
-            // nhanSanPhamtoolStripMenuItem2
-            // 
-            this.nhanSanPhamtoolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.nhanSanPhamtoolStripMenuItem2.Name = "nhanSanPhamtoolStripMenuItem2";
-            this.nhanSanPhamtoolStripMenuItem2.Size = new System.Drawing.Size(148, 27);
-            this.nhanSanPhamtoolStripMenuItem2.Text = "Nhập Sản Phẩm";
-            this.nhanSanPhamtoolStripMenuItem2.Click += new System.EventHandler(this.nhanSanPhamtoolStripMenuItem2_Click);
+            this.ThanhToantoolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.ThanhToantoolStripMenuItem1.Name = "ThanhToantoolStripMenuItem1";
+            this.ThanhToantoolStripMenuItem1.Size = new System.Drawing.Size(113, 27);
+            this.ThanhToantoolStripMenuItem1.Text = "Thanh Toán";
+            this.ThanhToantoolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // frmQuanTri
             // 
@@ -308,5 +318,6 @@
         private System.Windows.Forms.ToolStripMenuItem baoBieutoolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem lapHoaDontoolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nhanSanPhamtoolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem ThanhToantoolStripMenuItem1;
     }
 }

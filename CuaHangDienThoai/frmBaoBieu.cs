@@ -165,37 +165,97 @@ namespace CuaHangDienThoai
 
         private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            // Create a bitmap of the DataGridView
-            Bitmap bitmap = new Bitmap(dgvSanPham.Width, dgvSanPham.Height);
-            dgvSanPham.DrawToBitmap(bitmap, new Rectangle(0, 0, dgvSanPham.Width, dgvSanPham.Height));
+            // Thiết lập font và kích thước
+            Font titleFont = new Font("Arial", 16, FontStyle.Bold);
+            Font headerFont = new Font("Arial", 9, FontStyle.Bold);
+            Font contentFont = new Font("Arial", 8);
 
+            // Vị trí bắt đầu và kích thước
+            int startX = e.MarginBounds.Left;
+            int startY = e.MarginBounds.Top;
+            int offset = 40;
+            int rowHeight = 30; // Tăng chiều cao của mỗi dòng
+            
+            // In tiêu đề
+            string title = "DANH SÁCH SẢN PHẨM";
+            SizeF titleSize = e.Graphics.MeasureString(title, titleFont);
+            e.Graphics.DrawString(title, titleFont, Brushes.Black, 
+                startX + (e.MarginBounds.Width - titleSize.Width) / 2, startY);
 
-            // Calculate the print area
-            Rectangle printArea = e.MarginBounds;
-
-            // Calculate the aspect ratio of the DataGridView and the print area
-            float gridAspectRatio = (float)dgvSanPham.Width / dgvSanPham.Height;
-            float printAspectRatio = (float)printArea.Width / printArea.Height;
-
-            // Calculate the size of the image to fit the print area while maintaining aspect ratio
-            float imageWidth, imageHeight;
-            if (gridAspectRatio > printAspectRatio)
+            // Tính toán chiều rộng của các cột (điều chỉnh tỷ lệ)
+            int[] columnWidths = new int[] { 60, 70, 130, 150, 80, 90, 70, 70, 70, 70 };
+            int totalWidth = columnWidths.Sum();
+            float scaleFactor = e.MarginBounds.Width / (float)totalWidth;
+            
+            // Điều chỉnh chiều rộng cột theo tỷ lệ
+            for (int i = 0; i < columnWidths.Length; i++)
             {
-                imageWidth = printArea.Width;
-                imageHeight = printArea.Width / gridAspectRatio;
+                columnWidths[i] = (int)(columnWidths[i] * scaleFactor);
             }
-            else
+
+            // In tiêu đề cột
+            int currentX = startX;
+            int currentY = startY + offset;
+
+            // Vẽ background cho header
+            for (int i = 0; i < dgvSanPham.Columns.Count; i++)
             {
-                imageHeight = printArea.Height;
-                imageWidth = printArea.Height * gridAspectRatio;
+                Rectangle headerRect = new Rectangle(currentX, currentY, columnWidths[i], rowHeight);
+                e.Graphics.FillRectangle(Brushes.LightGray, headerRect);
+                e.Graphics.DrawRectangle(Pens.Black, headerRect);
+
+                // Căn giữa text trong header
+                StringFormat format = new StringFormat();
+                format.Alignment = StringAlignment.Center;
+                format.LineAlignment = StringAlignment.Center;
+
+                e.Graphics.DrawString(dgvSanPham.Columns[i].HeaderText, headerFont, 
+                    Brushes.Black, headerRect, format);
+                
+                currentX += columnWidths[i];
             }
 
-            // Calculate the position to center the image in the print area
-            float x = printArea.Left + (printArea.Width - imageWidth) / 2;
-            float y = printArea.Top + (printArea.Height - imageHeight) / 2;
+            currentY += rowHeight;
 
-            // Draw the bitmap onto the print page
-            e.Graphics.DrawImage(bitmap, x, y, imageWidth, imageHeight);
+            // In nội dung
+            for (int row = 0; row < dgvSanPham.Rows.Count; row++)
+            {
+                currentX = startX;
+
+                // Kiểm tra xem còn đủ không gian để in không
+                if (currentY + rowHeight > e.MarginBounds.Bottom)
+                {
+                    e.HasMorePages = true;
+                    return;
+                }
+
+                for (int col = 0; col < dgvSanPham.Columns.Count; col++)
+                {
+                    Rectangle cellRect = new Rectangle(currentX, currentY, columnWidths[col], rowHeight);
+                    e.Graphics.DrawRectangle(Pens.Black, cellRect);
+
+                    if (dgvSanPham.Rows[row].Cells[col].Value != null)
+                    {
+                        string cellValue = dgvSanPham.Rows[row].Cells[col].Value.ToString();
+                        
+                        // Căn giữa text trong ô
+                        StringFormat format = new StringFormat();
+                        format.Alignment = StringAlignment.Center;
+                        format.LineAlignment = StringAlignment.Center;
+                        
+                        // Tự động xuống dòng nếu text quá dài
+                        format.Trimming = StringTrimming.EllipsisCharacter;
+                        
+                        e.Graphics.DrawString(cellValue, contentFont, Brushes.Black, cellRect, format);
+                    }
+                    
+                    currentX += columnWidths[col];
+                }
+
+                currentY += rowHeight;
+            }
+
+            e.HasMorePages = false;
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
